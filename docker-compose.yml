@@ -12,3 +12,14 @@
 #      - /private/var/mysql-log:/var/log/mysql
 #    environment:
 #      MYSQL_ROOT_PASSWORD: 12345
+version: '2'
+services:
+  percona:
+    image: tomasvinduska/percona:latest
+    volumes:
+      - /private/var/mysql-data:/var/lib/mysql
+      - /private/var/mysql-log:/var/log/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
