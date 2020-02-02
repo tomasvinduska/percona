@@ -1,0 +1,14 @@
+#version: "2"
+#services:
+#  percona:
+#    build:
+#     context: .
+#     dockerfile: ./5.7/Dockerfile
+#    command: mysqld --connect_timeout=50
+#    ports:
+#      - 3306:3306
+#    volumes:
+#      - /private/var/mysql-data:/var/lib/mysql
+#      - /private/var/mysql-log:/var/log/mysql
+#    environment:
+#      MYSQL_ROOT_PASSWORD: 12345
